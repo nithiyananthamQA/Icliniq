@@ -2,7 +2,9 @@ import { Page,test,expect } from "@playwright/test";
 
 import Headerpage from '../Icliniq/Pages/IcliniqHeader'
 import Login from "./Pages/LoginPage";
-import IcliniqUrl from '../Icliniq/Pages/IclinqUrl'
+import IcliniqUrl from './Environment/UrlToBeTest'
+export { page, headerpage, login, url };
+
 
 let page:Page
 let headerpage:Headerpage
@@ -12,6 +14,7 @@ let url:IcliniqUrl
 test.beforeAll(async ({browser}) => {
 
     page = await browser.newPage() 
+     await page.setViewportSize({ width: 1500, height: 1080 });
     headerpage = new Headerpage(page);
     login = new Login(page)
     url = new IcliniqUrl(page)
@@ -22,7 +25,7 @@ test.beforeAll(async ({browser}) => {
 test('Enter Credentials',async()=>{
 
 
-    await login.UsernameInput('2375')
+    await login.UsernameInput()
     await login.PasswordInput()
     await login.LoginButton()
   

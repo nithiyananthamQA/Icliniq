@@ -3,7 +3,7 @@ import { Page } from "@playwright/test";
 
 export default class Headerpage {
     private page: Page;
-
+    
     constructor(page: Page) {
         this.page = page;
     }
@@ -11,6 +11,8 @@ export default class Headerpage {
     public async ClickLoginBtn() {
         const LoginBtn = await this.page.getByRole('link', { name: 'Login' });
         await LoginBtn.click();
+      
+
 
         if (LoginBtn != null) {
             return LoginBtn;

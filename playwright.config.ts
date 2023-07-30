@@ -8,8 +8,14 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * See https://playwright.dev/docs/test-configuration.
+ 
  */
+
+
+
 export default defineConfig({
+
+ 
   
   testDir: './tests/Icliniq/',
   /* Run tests in files in parallel */
@@ -31,7 +37,8 @@ export default defineConfig({
     trace: 'retain-on-failure',
     //screenshot: 'on',
     //video:'retain-on-failure'
-    viewport: null,
+    // viewport:{ width: 1880, height: 1080 },
+    
 
   },
 

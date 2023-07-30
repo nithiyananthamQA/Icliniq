@@ -8,9 +8,9 @@ export default class Login{
         this.page = page;
     }
    
-    public async UsernameInput(username){
+    public async UsernameInput(){
         const UsrinputBox = await this.page.locator('[id="username"]')
-        await UsrinputBox.fill(username)
+        await UsrinputBox.fill('2375')
          if(UsrinputBox != null){
              return UsrinputBox
          }
