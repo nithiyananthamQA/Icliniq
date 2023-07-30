@@ -10,6 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  
   testDir: './tests/Icliniq/',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -30,6 +31,8 @@ export default defineConfig({
     trace: 'retain-on-failure',
     //screenshot: 'on',
     //video:'retain-on-failure'
+    viewport: null,
+
   },
 
   /* Configure projects for major browsers */

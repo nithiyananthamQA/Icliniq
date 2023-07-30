@@ -2,8 +2,8 @@ import { Page } from "@playwright/test";
 
 export default class Headerpage {
     private page: Page
-        // private  Environment = 'https://staging.icliniq.com/'
-      private  Environment = 'https://www.icliniq.com/'
+        private  Environment = 'https://staging.icliniq.com/'
+    //   private  Environment = 'https://www.icliniq.com/'
     //   private  Environment = 'https://staging.icliniq.com/'
     //   private  Environment = 'https://staging.icliniq.com/'
     constructor(page: Page) {

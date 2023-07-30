@@ -20,12 +20,13 @@ export default class Headerpage {
     }
 
     public async ClickSignout() {
-        const SoutDropDown = await this.page.locator("//button[@aria-label='welcome']");
-        await SoutDropDown.dispatchEvent('SoutDropDown')
-        await SoutDropDown.click()
-        await this.page.waitForSelector('(//a[normalize-space()="Log Out"])[3]')
-
-        const SignoutBtn = await this.page.locator('(//a[normalize-space()="Log Out"])[3]');
+        await this.page.locator('//*[@id="nav"]/div/ul[2]/li[4]/a').click()
+        await this.page.locator('//*[@id="nav"]/div/ul[2]/li[4]/ul/div[2]/li[1]/a').click()
+        const signoutbtn=  await this.page.locator("//*[@id='welcome-dropdown']/span[2]/b")
+        await signoutbtn.click()
+        //  await this.page.getByLabel('welcome').click();
+        const SignoutBtn = await this.page.locator('//*[@id="navbar"]/ul[2]/li/ul/li[3]/a')
         await SignoutBtn.click();
+        
     }
 }
