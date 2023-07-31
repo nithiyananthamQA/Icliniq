@@ -4,4 +4,3 @@ test('Ask a Query',async({page})=>{
     //test testing
 })
 
-//open the header tag
