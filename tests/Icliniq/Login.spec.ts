@@ -18,7 +18,7 @@ test.beforeAll(async ({browser}) => {
     headerpage = new Headerpage(page);
     login = new Login(page)
     url = new IcliniqUrl(page)
-    await url.URL
+    await url.NavigateURL
     await headerpage.ClickLoginBtn()
 })
 

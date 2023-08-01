@@ -8,11 +8,10 @@ export default class Headerpage {
     //   private  Environment = 'https://staging.icliniq.com/'
     constructor(page: Page) {
         this.page = page
-    
     }
 
-    //Locators
-    public get URL() {
+    //Locators'
+    public get NavigateURL() {
         const LoginUrl = this.page.goto(this.Environment)
         if (LoginUrl != null) {
             return LoginUrl;

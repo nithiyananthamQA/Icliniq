@@ -7,7 +7,7 @@ import Login from "./Pages/LoginPage";
 let dashboard:DashBoard
 dashboard = new DashBoard(page)
 test('Ask a query',async()=>{
-    await url.URL
+    await url.NavigateURL
     await headerpage.ClickLoginBtn()
     await login.LoginButton()
     await login.PasswordInput()
